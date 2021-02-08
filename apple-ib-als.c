@@ -548,6 +548,7 @@ static int appleals_probe(struct hid_device *hdev,
 	als_dev = iio_priv(iio_dev);
 
 	als_dev->hid_dev = hdev;
+	als_dev->iio_dev = iio_dev;
 	als_dev->cfg_report = state_field->report;
 	als_dev->illum_field = illum_field;
 
