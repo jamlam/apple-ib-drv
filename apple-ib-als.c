@@ -486,8 +486,8 @@ static int appleals_config_iio(struct appleals_device *als_dev)
 		return rc;
 	}
 
-	iio_trig = devm_iio_trigger_alloc(parent, "%s-dev%d", iio_dev->name,
-					  iio_dev->id);
+	iio_trig = devm_iio_trigger_alloc(parent, "%s-dev%d", 
+					  iio_dev->name);
 	if (!iio_trig)
 		return -ENOMEM;
 
